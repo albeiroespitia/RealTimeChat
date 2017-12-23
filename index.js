@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var mysql = require('mysql');
 const path = require('path');
 var engine = require('socket.io');
+var port = process.env.PORT || 8080;
 var app = express();
 var connection = mysql.createConnection({
 	host : 'localhost',
@@ -48,9 +49,9 @@ app.post('/login', function (req, res){
 })
 
 
-let server = app.listen(3000,()=>{
-	console.log('Corriendo en el puerto 3000');
-})
+app.listen(port, function() {
+	console.log('Our app is running on http://localhost:' + port);
+});
 
 const io = engine.listen(server);
 
