@@ -49,9 +49,9 @@ app.post('/login', function (req, res){
 })
 
 
-app.listen(port, function() {
-	console.log('Our app is running on http://localhost:' + port);
-});
+let server = app.listen(port,()=>{
+	console.log('Corriendo en el puerto'+port);
+})
 
 const io = engine.listen(server);
 
