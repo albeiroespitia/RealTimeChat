@@ -1,0 +1,250 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans';
+}
+
+a{
+	text-decoration: none;
+}
+
+.header{
+	padding: 15px;
+	width: 100%;
+	height: 75px;
+	border-bottom: 1px solid gray;
+}
+
+.header .node-logo{
+	width: 50px;
+	height: 55px;
+	float:left;
+	margin-left: 2%;
+}
+
+.header h3{
+	font-size: 30px;
+	position: absolute;
+	color: #484848;
+	left: 41%;
+	font-weight: 400;
+	right: 41%;
+}
+
+
+.header .react-logo{
+	width: 55px;
+	height: 50px;
+	float:right;
+	margin-right: 2%;
+}
+
+
+.loginContainer{
+	border: 1px solid #A0A0A0;
+	padding: 50px;
+	width: 40%;
+	margin: auto;
+	margin-top: 20vh;
+}
+
+#sign-in{
+	border-radius: 5px;
+	height: 70px;
+	padding: 15px;
+	text-align: center;
+	background: #ff7e82;
+	color: white;
+	margin-bottom: 10px;
+}
+
+#sign-in h2{
+	font-weight: 100;
+	font-size: 30px;
+}
+
+
+#sign-up{
+	border-radius: 5px;
+	height: 70px;
+	padding: 15px;
+	text-align: center;
+	background: #4568b2;
+	color: white;
+}
+
+#sign-up h2{
+	font-weight: 100;
+	font-size: 30px;
+}
+
+.register-form{
+	border: 1px solid #A0A0A0;
+	padding: 50px;
+	padding-bottom: 20px;
+	width: 40%;
+	margin: auto;
+	margin-top: 4vh;
+}
+
+.register-form h2{
+	font-weight: 100;
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+form input{
+	width: 100%;
+	height: 50px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	padding: 10px;
+	border: none;
+	border-bottom: 1px solid #A0A0A0;
+	font-size: 16px;
+}
+
+form input:focus{
+    outline: none !important;
+    border-bottom: 1px solid #ff7e82;
+}
+
+form input[type="submit"]{
+	background: #4568b2;
+	color: white;
+	cursor: pointer;
+	font-size: 25px;
+	font-weight: 100;
+	padding: 0;
+}
+
+.login-form{
+	border: 1px solid #A0A0A0;
+	padding: 50px;
+	padding-bottom: 20px;
+	width: 40%;
+	margin: auto;
+	margin-top: 10vh;
+}
+
+.login-form h2{
+	font-weight: 100;
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.login-form form input[type="submit"]{
+	background: #ff7e82;
+}
+
+.error-message{
+	color: red;
+	font-weight: 100;
+	margin-bottom: 10px;
+	display: none;
+}
+
+.box-chat{
+	width: 40%;
+	height: 500px;
+	margin: auto;
+	margin-top: 20px;
+	border: 1px solid #A0A0A0;
+}
+
+.messages{
+	width: 100%;
+	height: 90%;
+	border-bottom: 1px solid #A0A0A0;
+	padding:15px;
+	overflow: auto;
+}
+
+.write{
+	width: 80%;
+	border: none;
+	height: 40px;
+	margin-left: 5%;
+	font-size: 20px;
+	float: left;
+}
+
+.write:focus{
+	outline: none !important;
+    border-bottom: 1px solid #ff7e82;
+}
+
+.send-message{
+	float: left;
+	cursor: pointer;
+	border-radius: 5px;
+	background: #ff7e82;
+	width: 12%;
+	font-size: 14px;
+	margin-top: 1%;
+	margin-left: 1%;
+	height: 40px;
+}
+
+.messages-box{
+	list-style: none;
+}
+
+.messages-box li{
+	border-bottom: 1px solid #A0A0A0;
+	margin-bottom: 10px;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+.usuario{
+	color: #5F9EA0;
+}
